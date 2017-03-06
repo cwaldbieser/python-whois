@@ -1,6 +1,7 @@
 import re
 import sys
 import datetime
+from dateutil.parser import parse as parse_date
 
 PYTHON_VERSION = sys.version_info[0]
 
@@ -99,3 +100,5 @@ def str_to_date_py2(s):
 
 	raise ValueError("Unknown date format: '%s'" % s)
 
+str_to_date = parse_date
+str_to_date_py2 = parse_date
